@@ -1,0 +1,27 @@
+@media only screen and (max-width: 600px) {
+
+    .class-item {
+        display: none;
+    }
+
+    .glyphs {
+        display: none;
+    }
+
+    nav {
+        display: none;
+    }
+
+    div.content-wrapper {
+        display: block;
+    }
+
+    div.hero-wrapper{
+        height: auto;
+    }
+
+    section#container {
+        justify-content: flex-start;
+    }
+
+}

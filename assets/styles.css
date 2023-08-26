@@ -1,0 +1,247 @@
+@font-face {
+    font-family: 'Standard';
+    src: url('standard-book.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Standard';
+    src: url('standard-bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+::selection {
+    background-color: yellowgreen;
+}
+  
+
+body {
+    font-size: 20px;
+    margin: 24px;
+    font-family: 'Standard', sans-serif;
+    letter-spacing: -0.3px;
+    line-height: 1.3;
+    background-color: lightgrey;
+}
+
+section#container {
+    display: flex;
+    justify-content: space-between;
+    height: calc(100vh - 48px);
+}
+
+div.hero-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* background-color: red; */
+    width: calc(50% - 24px);
+    font-weight: 700;
+}
+
+div.content-wrapper {
+    /* background-color: blue; */
+    width: calc(50% - 24px);
+    overflow-y: scroll;
+}
+
+div.class-wrapper, div.schedule-section, #schedule-pd, #schedule-code {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    /* line-height: 1; */
+}
+
+#schedule-pd, #schedule-code {
+    gap: 48px;
+}
+
+.content-wrapper nav ul {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+}
+
+nav#nav-mobile {
+    display: none;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: whitesmoke;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-top: 24px;
+    /* background-color: violet; */
+}
+
+h6 {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    background-color: whitesmoke;
+    padding: 5px 5px 1px 4px;
+    margin-bottom: 4px;
+
+}
+
+.schedule-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.schedule-assignments p {
+    margin-bottom: 24px;
+    line-height: 1.3;
+}
+
+.schedule-item:not(.schedule-block .schedule-item){
+    font-weight: 700;
+}
+
+#track-dropdown {
+    position: relative;
+    width: max-content;
+}
+
+button {
+    font-family: 'Standard', sans-serif;
+    font-size: 20px;
+    background-color: whitesmoke;
+    border: none;
+    min-width: 175px;
+    padding: 4px 6px 2px 6px;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    box-sizing: content-box;
+}
+
+button, #option {
+    font-weight: 700;
+}
+
+button::after {
+    content: '▼';
+    vertical-align: middle;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    margin-left: 4px;
+}
+
+
+#track-dropdown:hover button {
+    cursor: pointer;
+    background-color:coral;
+}
+
+#option {
+    display: none;
+    position: absolute;
+    min-width: 175px;
+    padding: 4px 6px 2px 6px;
+    background-color:yellowgreen;
+}
+
+/* .track-dropdown:hover button ~ #option {
+    display: block;
+} */
+
+#option:hover {
+    cursor: pointer;
+    background-color:whitesmoke;
+}
+
+#option:hover a {
+    color: black;
+}
+
+#schedule-code {
+    display: none;
+}
+
+span.ext-link {
+    margin-left: 4px;
+    font-family: 'Inter', sans-serif;
+}
+
+
+@media only screen and (max-width: 992px) {
+
+    .schedule-item {
+        flex-direction: column;
+    }
+
+
+}
+
+@media only screen and (max-width: 800px) {
+    body {
+        margin: 20px;
+    }
+
+    div.hero-wrapper, div.content-wrapper {
+        width: calc(50% - 12px);
+    }
+
+    button {
+        font-family: 'Standard', sans-serif;
+    }
+
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    nav#nav-mobile{
+        display: block;
+    }
+
+    section#container {
+        flex-direction: column;
+    }
+
+    div.hero-wrapper, div.content-wrapper {
+        width: 100%;
+    }
+
+    div.hero-wrapper {
+        height: 100%;
+    }
+
+    div.content-wrapper {
+        display: none;
+    }
+
+    div.class-wrapper, div.schedule-section, #schedule-pd, #schedule-code {
+        gap: 20px;
+    }
+
+    button, #option {
+        padding: 6px 6px 3px 12px;
+    }
+
+    h6 {
+        padding: 5px 5px 3px 4px;
+    }
+}
+
+#scroll-down {
+    height: 30vh;
+}

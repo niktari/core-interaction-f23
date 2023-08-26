@@ -1,0 +1,92 @@
+.glyphs {
+    display: flex;
+    height: 25vw;
+    /* background-color: green; */
+}
+
+.glyph {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.glyph div {
+    border-radius: 100px;
+}
+
+#letter-c {
+    width: 50%;
+    /* background-color: yellow; */
+}
+
+#number-1 {
+    width: 25%;
+    /* background-color: blueviolet; */
+}
+
+#letter-i {
+    width: 25%;
+    /* background-color: orchid; */
+}
+
+#letter-c div {
+    width: 8.33333333333%;
+    height: 8.33333333333%;
+    transition: 0.3s;
+}
+
+#number-1 div, #letter-i div {
+    width: 16.6666666667%;
+    height: 8.33333333333%;
+}
+
+#number-1 div {
+    border-radius: 0px;
+    transition: border-radius 0.3s ease;
+}
+
+.glyph div.blank {
+    background-color: transparent;
+}
+
+.glyph div.fill {
+    background-color: black;
+    border-radius: 0px;
+}
+
+.rotate {
+    animation: rotation 2s infinite linear;
+  }
+
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+
+    .glyphs {
+        height: 25vw;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+    .glyphs {
+        height: 50vw;
+    }
+
+    #letter-c div {
+        height: 8.5%;
+    }
+    
+    #number-1 div, #letter-i div {
+        height: 8.5%;
+    }
+
+}
