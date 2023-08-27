@@ -80,6 +80,9 @@ a {
 
 a:hover {
     color: whitesmoke;
+}
+
+a:hover:not(.hero-wrapper a){
     text-decoration: underline;
     text-underline-offset: 6px;
 }
