@@ -80,6 +80,13 @@ a {
 
 a:hover {
     color: whitesmoke;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+a.active {
+    text-decoration: underline;
+    text-underline-offset: 6px;
 }
 
 .wrapper {
