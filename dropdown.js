@@ -13,7 +13,7 @@ o.onclick = function() {
 
     o.style.display = "none";
 
-    if(schedule_pd.style.display === "none") {
+    if(schedule_pd.style.display == "none") {
         schedule_pd.style.display = "flex"
         schedule_code.style.display = "none";
         b[0].innerHTML = "Product Design";
