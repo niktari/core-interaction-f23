@@ -187,7 +187,7 @@ button::after {
 
 #track-dropdown:hover button {
     cursor: pointer;
-    background-color:violet;
+    background-color:lightskyblue;
 }
 
 #option {
