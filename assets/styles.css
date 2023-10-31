@@ -82,7 +82,7 @@ a:hover {
     color: whitesmoke;
 }
 
-a:hover:not(.hero-wrapper a){
+a:hover:not(.hero-wrapper a), .assignment-block li a{
     text-decoration: underline;
     text-underline-offset: 6px;
 }
@@ -127,8 +127,9 @@ h6 {
     font-weight: 700;
 }
 
-.schedule-assignments ol {
-    list-style-type: initial;
+.assignment-block ul {
+    padding-left: 20px;
+    list-style: disc outside;
 }
 
 .title {
